@@ -18,7 +18,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
   ],
-  ignorePatterns: ["node_modules/", "dist/", "prettier.config.js", "jest.config.js", "config/"],
+  ignorePatterns: ["node_modules/", "dist/", "prettier.config.js", "jest.config.js", "jestSetup.ts", "config/", ".eslintrc.js"],
   rules: {
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-use-before-define": "off",
