@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/cjs",
+    "declarationDir": "dist/cjs",
+    "module": "CommonJS",
+    "target": "es5",
+    "declaration": true,
+    "removeComments": false
+  },
+  "exclude": ["**/*.tests.tsx", "**/*.tests.ts", "**/__tests__", "jestSetup.ts"]
+}
