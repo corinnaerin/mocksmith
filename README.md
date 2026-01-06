@@ -46,11 +46,7 @@ yarn add mocksmith
 ## 🧰 Example: Creating a Generator
 
 ```ts
-import {
-  createObjGenerator,
-  createArrayGenerator,
-  GeneratorMode,
-} from "mocksmith";
+import { createObjGenerator, createArrayGenerator, GeneratorMode } from "mocksmith";
 import chance from "chance";
 
 interface MyObject {
@@ -71,10 +67,7 @@ const generateMyObject = createObjGenerator({
   dateKey: [GeneratorMode.FORCE, () => chance().date()],
   enumKey: () => generateMyEnum(),
 
-  optionalNestedObjectKey: [
-    GeneratorMode.OPTIONAL,
-    (overrides) => generateMyNestedObject(overrides),
-  ],
+  optionalNestedObjectKey: [GeneratorMode.OPTIONAL, overrides => generateMyNestedObject(overrides)],
 
   nestedObjectArray: createArrayGenerator(generateMyNestedObject, 10),
   nestedPrimitiveArray: createArrayGenerator(() => chance().guid()),
