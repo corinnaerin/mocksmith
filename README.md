@@ -4,7 +4,7 @@ Coming soon!
 
 # 🛠️ Mocksmith
 
-### *Template-driven, deeply composable test data generation for TypeScript*
+### _Template-driven, deeply composable test data generation for TypeScript_
 
 Mocksmith helps you generate realistic test data **without verbose mocks, boilerplate objects, or copy-pasted fixtures**.
 Define a **template** describing how each field should be generated, provide **optional overrides**, and Mocksmith produces fully typed, deeply nested objects—while keeping tests readable and focused on what actually matters.
@@ -17,12 +17,12 @@ Mocksmith works perfectly with any random data generator (like `chance`, `faker`
 
 Traditional mocks tend to drift, grow unwieldy, or hide what your test actually cares about. Mocksmith solves that by:
 
-* 🧱 **Letting you define object “blueprints” once**
-* 🔄 **Allowing nested overrides at any depth**
-* 🧪 **Keeping tests readable and intentional**
-* ✨ **Generating only what you need, no more, no less**
-* 🔌 **Pairing easily with any random-value generator**
-* ⚠️ **Avoiding shared mock state between tests**
+- 🧱 **Letting you define object “blueprints” once**
+- 🔄 **Allowing nested overrides at any depth**
+- 🧪 **Keeping tests readable and intentional**
+- ✨ **Generating only what you need, no more, no less**
+- 🔌 **Pairing easily with any random-value generator**
+- ⚠️ **Avoiding shared mock state between tests**
 
 In other words:
 **Less mock maintenance. More test clarity.**
@@ -46,7 +46,11 @@ yarn add mocksmith
 ## 🧰 Example: Creating a Generator
 
 ```ts
-import { createObjGenerator, createArrayGenerator, GeneratorMode } from "mocksmith";
+import {
+  createObjGenerator,
+  createArrayGenerator,
+  GeneratorMode,
+} from "mocksmith";
 import chance from "chance";
 
 interface MyObject {
@@ -96,11 +100,7 @@ const myObject = generateMyObject({
   booleanKey: true,
   dateKey: new Date(),
   optionalNestedObjectKey: { nestedKey1: "value" },
-  nestedObjectArray: [
-    { nestedKey1: "override" },
-    {},
-    undefined,
-  ],
+  nestedObjectArray: [{ nestedKey1: "override" }, {}, undefined],
   nestedPrimitiveArray: 5, // Shortcut for "generate five of these"
 });
 ```
@@ -113,10 +113,10 @@ Overrides can be nested at any depth. Arrays, maps, sets, and records support ov
 
 Without Mocksmith, tests often contain sprawling mock objects:
 
-* giant fixtures that get reused everywhere
-* unclear which fields matter to the test
-* brittle mocks that break unrelated tests
-* lots of copy/pasting
+- giant fixtures that get reused everywhere
+- unclear which fields matter to the test
+- brittle mocks that break unrelated tests
+- lots of copy/pasting
 
 With Mocksmith:
 
@@ -145,10 +145,10 @@ describe("getDisplayName", () => {
 
 ### Benefits in practice:
 
-* Tests only specify what they care about
-* Everything else is safely generated
-* No shared mocks → no spooky test failures
-* Much clearer intent
+- Tests only specify what they care about
+- Everything else is safely generated
+- No shared mocks → no spooky test failures
+- Much clearer intent
 
 ---
 
@@ -160,9 +160,9 @@ Define how each field should be generated.
 
 ### **Generator Modes**
 
-* `INCLUDE` – Use overrides if provided; otherwise generate
-* `OPTIONAL` – Don’t generate unless included
-* `FORCE` – Always generate, ignoring overrides
+- `INCLUDE` – Use overrides if provided; otherwise generate
+- `OPTIONAL` – Don’t generate unless included
+- `FORCE` – Always generate, ignoring overrides
 
 ### **Overrides**
 
@@ -176,12 +176,12 @@ Generators can be composed to any depth.
 
 ## 🧩 Works great with…
 
-* `chance`
-* `@faker-js/faker`
-* `randexp`
-* your own custom generators
+- `chance`
+- `@faker-js/faker`
+- `randexp`
+- your own custom generators
 
-Mocksmith doesn’t dictate how to generate *values* — only the *structure*.
+Mocksmith doesn’t dictate how to generate _values_ — only the _structure_.
 
 ---
 
@@ -194,3 +194,12 @@ PRs, issues, and suggestions are welcome! If you try Mocksmith in your codebase 
 ## 📘 License
 
 MIT
+
+## Developing in this repo
+
+This repo uses yarn with PnP, which means it requires the SDKs to work with specific IDEs. It has the SDKs required to work with VSCode embedded, but if you are
+running into errors around typescript, prettier, etc. in a different IDE you will need to run the following command:
+
+`yarn dlx @yarnpkg/sdks <IDE>`
+
+For more details, see https://yarnpkg.com/getting-started/editor-sdks
