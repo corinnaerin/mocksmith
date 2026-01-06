@@ -1,8 +1,4 @@
-# WIP
-
-Coming soon!
-
-# 🛠️ Mocksmith
+# Mocksmith
 
 ### _Template-driven, deeply composable test data generation for TypeScript_
 
@@ -13,23 +9,25 @@ Mocksmith works perfectly with any random data generator (like `chance`, `faker`
 
 ---
 
-## 🚀 Why Mocksmith?
+## Why Mocksmith?
 
 Traditional mocks tend to drift, grow unwieldy, or hide what your test actually cares about. Mocksmith solves that by:
 
-- 🧱 **Letting you define object “blueprints” once**
-- 🔄 **Allowing nested overrides at any depth**
-- 🧪 **Keeping tests readable and intentional**
-- ✨ **Generating only what you need, no more, no less**
-- 🔌 **Pairing easily with any random-value generator**
-- ⚠️ **Avoiding shared mock state between tests**
+- **Letting you define object “blueprints” once**
+- **Allowing nested overrides at any depth**
+- **Keeping tests readable and intentional**
+- **Generating only what you need, no more, no less**
+- **Pairing easily with any random-value generator**
+- **Avoiding shared mock state between tests**
 
 In other words:
 **Less mock maintenance. More test clarity.**
 
 ---
 
-## 📦 Installation
+## Installation
+
+WIP: Coming soon! (Not yet published to npm)
 
 ```bash
 npm install mocksmith
@@ -43,7 +41,7 @@ yarn add mocksmith
 
 ---
 
-## 🧰 Example: Creating a Generator
+## Example: Creating a Generator
 
 ```ts
 import { createObjGenerator, createArrayGenerator, GeneratorMode } from "mocksmith";
@@ -76,7 +74,7 @@ const generateMyObject = createObjGenerator({
 
 ---
 
-## 🧪 Example: Generating an Object
+## Example: Generating an Object
 
 ```ts
 const myObject: MyObject = generateMyObject();
@@ -86,7 +84,7 @@ This creates an object with the shape defined by your template—generating only
 
 ---
 
-## 🎯 Example: Using Overrides
+## Example: Using Overrides
 
 ```ts
 const myObject = generateMyObject({
@@ -102,7 +100,7 @@ Overrides can be nested at any depth. Arrays, maps, sets, and records support ov
 
 ---
 
-## 🧪 Using Mocksmith in Unit Tests
+## Using Mocksmith in Unit Tests
 
 Without Mocksmith, tests often contain sprawling mock objects:
 
@@ -145,7 +143,7 @@ describe("getDisplayName", () => {
 
 ---
 
-## 🔧 Core Concepts
+## Core Concepts
 
 ### **Templates**
 
@@ -167,7 +165,7 @@ Generators can be composed to any depth.
 
 ---
 
-## 🧩 Works great with…
+## Works great with…
 
 - `chance`
 - `@faker-js/faker`
@@ -178,15 +176,15 @@ Mocksmith doesn’t dictate how to generate _values_ — only the _structure_.
 
 ---
 
-## 🤝 Contributing
+## Provenance
+
+Mocksmith was originally developed as an internal utility and later extracted,
+cleaned up, and published as an open-source library after removing
+company-specific references and dependencies.
+
+## Contributing
 
 PRs, issues, and suggestions are welcome! If you try Mocksmith in your codebase and have ideas for improvement, please share your experience.
-
----
-
-## 📘 License
-
-MIT
 
 ---
 
@@ -198,3 +196,9 @@ running into errors around typescript, prettier, etc. in a different IDE you wil
 `yarn dlx @yarnpkg/sdks <IDE>`
 
 For more details, see https://yarnpkg.com/getting-started/editor-sdks
+
+---
+
+## License
+
+MIT
