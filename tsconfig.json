@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "sourceMap": false,
-    "lib": ["ES2015"],
+    "lib": ["ES2020"],
     "outDir": "dist/esm",
     "declarationDir": "dist/esm",
     "esModuleInterop": true,

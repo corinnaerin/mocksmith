@@ -67,7 +67,7 @@ const generateMyObject = createObjGenerator({
   dateKey: [GeneratorMode.FORCE, () => chance().date()],
   enumKey: () => generateMyEnum(),
 
-  optionalNestedObjectKey: [GeneratorMode.OPTIONAL, overrides => generateMyNestedObject(overrides)],
+  optionalNestedObjectKey: [GeneratorMode.OPTIONAL, (overrides) => generateMyNestedObject(overrides)],
 
   nestedObjectArray: createArrayGenerator(generateMyNestedObject, 10),
   nestedPrimitiveArray: createArrayGenerator(() => chance().guid()),
@@ -187,6 +187,8 @@ PRs, issues, and suggestions are welcome! If you try Mocksmith in your codebase 
 ## 📘 License
 
 MIT
+
+---
 
 ## Developing in this repo
 
