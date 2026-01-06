@@ -1,0 +1,16 @@
+{
+  "files": [
+    "src/**/*.{js,ts,tsx}"
+  ],
+  "formats": [
+    {
+      "name": "stylish",
+      "output": "console"
+    },
+    {
+      "name": "json",
+      "output": "file",
+      "path": "eslint-report.json"
+    }
+  ]
+}

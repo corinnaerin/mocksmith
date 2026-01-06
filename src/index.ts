@@ -1,1 +1,5 @@
-const a: number = 1234;
+function helloWorld(): string {
+  return "Hello World";
+}
+
+helloWorld();
