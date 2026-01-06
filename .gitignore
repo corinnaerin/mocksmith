@@ -1,3 +1,11 @@
+yarn-error.log
+dist
+coverage
+*.tgz
+.vscode/settings.json
+junit.xml
+docs
+
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
